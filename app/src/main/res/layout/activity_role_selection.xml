@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#14111A">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to UniBazaar"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose how you want to use the app"
+        android:textSize="15sp"
+        android:textColor="#CFC7DA"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/buttonBuyer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I am a Buyer"
+        android:textStyle="bold"
+        android:textColor="#1A1422"
+        android:backgroundTint="#C9B3FF"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonSeller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I am a Seller"
+        android:textStyle="bold"
+        android:textColor="#1A1422"
+        android:backgroundTint="#E3D7FF" />
+
+</LinearLayout>
