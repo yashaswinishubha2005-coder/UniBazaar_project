@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ub_primary">#05B084</color>
+    <color name="ub_surface">#F1EDEA</color>
+    <color name="ub_deep">#015A84</color>
+    <color name="ub_soft">#BADFCD</color>
+    <color name="ub_text_primary">#083B52</color>
+    <color name="ub_text_secondary">#4D6B73</color>
+    <color name="ub_success">#0A8F6A</color>
 </resources>

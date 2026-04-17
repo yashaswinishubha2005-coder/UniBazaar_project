@@ -1,46 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#14111A">
+    android:fillViewport="true"
+    android:background="@drawable/screen_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to UniBazaar"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose how you want to use the app"
-        android:textSize="15sp"
-        android:textColor="#CFC7DA"
-        android:layout_marginBottom="32dp" />
-
-    <Button
-        android:id="@+id/buttonBuyer"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="I am a Buyer"
-        android:textStyle="bold"
-        android:textColor="#1A1422"
-        android:backgroundTint="#C9B3FF"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/buttonSeller"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="I am a Seller"
-        android:textStyle="bold"
-        android:textColor="#1A1422"
-        android:backgroundTint="#E3D7FF" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Space"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/ub_deep"
+            android:layout_marginTop="24dp" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a role and jump into a campus marketplace designed for quick, trusted exchanges."
+            android:textSize="16sp"
+            android:textColor="@color/ub_text_secondary"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="2"
+            android:useDefaultMargins="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buyer Mode"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ub_surface" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Browse campus deals, compare items, and message sellers instantly."
+                    android:textSize="15sp"
+                    android:textColor="@color/ub_soft"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="18dp" />
+
+                <Button
+                    android:id="@+id/buttonBuyer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter as Buyer"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_card_background"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seller Mode"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ub_deep" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="List products, update prices, track interest, and manage buyer chats."
+                    android:textSize="15sp"
+                    android:textColor="@color/ub_text_secondary"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="18dp" />
+
+                <Button
+                    android:id="@+id/buttonSeller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter as Seller"
+                    android:textStyle="bold"
+                    android:textColor="@color/ub_deep"
+                    android:background="@drawable/button_secondary" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

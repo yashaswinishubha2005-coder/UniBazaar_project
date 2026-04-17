@@ -2,14 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#14111A"
+    android:background="@drawable/screen_background"
     android:padding="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#201A29"
+        android:background="@drawable/light_card_background"
         android:padding="20dp">
 
         <ImageView
@@ -28,7 +28,7 @@
             android:text="Title"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/ub_deep"
             android:layout_marginBottom="14dp" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:text="Rs. 0"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#9BE39B"
+            android:textColor="@color/ub_success"
             android:layout_marginBottom="14dp" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="Category: Books"
             android:textSize="16sp"
-            android:textColor="#D2C7E6"
+            android:textColor="@color/ub_text_secondary"
             android:layout_marginBottom="18dp" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:text="Description"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/ub_deep"
             android:layout_marginBottom="8dp" />
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:text="Description goes here"
             android:textSize="16sp"
-            android:textColor="#CFC7DA"
+            android:textColor="@color/ub_text_secondary"
             android:layout_marginBottom="24dp" />
 
         <Button
@@ -74,8 +74,19 @@
             android:layout_height="wrap_content"
             android:text="Chat with Seller"
             android:textStyle="bold"
-            android:textColor="#1A1422"
-            android:backgroundTint="#C9B3FF" />
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary" />
+
+        <Button
+            android:id="@+id/buttonEditListing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Listing"
+            android:textStyle="bold"
+            android:textColor="@color/ub_deep"
+            android:background="@drawable/button_secondary"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
 
     </LinearLayout>
 </ScrollView>

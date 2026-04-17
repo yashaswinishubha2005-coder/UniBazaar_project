@@ -1,7 +1,6 @@
 package com.example.unibazaar;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,12 +39,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 
         if (message.getSenderId().equals(currentUserId)) {
             holder.messageContainer.setGravity(Gravity.END);
-            holder.textViewMessage.setBackgroundColor(Color.parseColor("#D1C4E9"));
-            holder.textViewMessage.setTextColor(Color.BLACK);
+            holder.textViewMessage.setBackgroundResource(R.drawable.message_sent_background);
+            holder.textViewMessage.setTextColor(context.getColor(R.color.white));
         } else {
             holder.messageContainer.setGravity(Gravity.START);
-            holder.textViewMessage.setBackgroundColor(Color.parseColor("#EEEEEE"));
-            holder.textViewMessage.setTextColor(Color.BLACK);
+            holder.textViewMessage.setBackgroundResource(R.drawable.message_received_background);
+            holder.textViewMessage.setTextColor(context.getColor(R.color.ub_deep));
         }
     }
 

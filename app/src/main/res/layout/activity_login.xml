@@ -3,48 +3,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#14111A">
+    android:background="@drawable/screen_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="24dp">
+        android:padding="22dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/card_background"
-            android:padding="24dp">
-            <ImageView
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_unibazaar_logo"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="UniBazaar Logo" />
+            android:padding="24dp"
+            android:layout_marginTop="18dp">
 
+            <ImageView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/ic_unibazaar_logo"
+                android:layout_marginBottom="18dp"
+                android:contentDescription="UniBazaar Logo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UniBazaar"
-                android:textSize="32sp"
+                android:textSize="34sp"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp" />
+                android:textColor="@color/ub_surface"
+                android:layout_marginBottom="6dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Campus Buy &amp; Sell Marketplace"
-                android:textSize="15sp"
-                android:textColor="#CFC7DA"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="28dp" />
+                android:textSize="16sp"
+                android:textColor="@color/ub_soft"
+                android:layout_marginBottom="20dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="1"
+                android:layout_marginBottom="22dp"
+                android:useDefaultMargins="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/grid_tile_primary"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buy Smart"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Books, gadgets, furniture and more."
+                        android:textColor="@color/ub_surface"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/grid_tile_secondary"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chat Safe"
+                        android:textColor="@color/ub_deep"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Connect inside the app without sharing numbers."
+                        android:textColor="@color/ub_text_primary"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </GridLayout>
 
             <EditText
                 android:id="@+id/editTextEmail"
@@ -52,9 +108,10 @@
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#AAA3B7"
+                android:textColor="@color/ub_text_primary"
+                android:textColorHint="@color/ub_text_secondary"
                 android:background="@drawable/input_background"
+                android:padding="16dp"
                 android:layout_marginBottom="16dp" />
 
             <EditText
@@ -63,9 +120,10 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#AAA3B7"
+                android:textColor="@color/ub_text_primary"
+                android:textColorHint="@color/ub_text_secondary"
                 android:background="@drawable/input_background"
+                android:padding="16dp"
                 android:layout_marginBottom="20dp" />
 
             <Button
@@ -74,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:textStyle="bold"
-                android:textColor="#1A1422"
+                android:textColor="@color/white"
                 android:background="@drawable/button_primary"
                 android:layout_marginBottom="12dp" />
 
@@ -84,10 +142,9 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:textStyle="bold"
-                android:textColor="#1A1422"
+                android:textColor="@color/ub_deep"
                 android:background="@drawable/button_secondary" />
 
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

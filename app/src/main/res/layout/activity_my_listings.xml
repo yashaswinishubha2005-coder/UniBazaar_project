@@ -4,16 +4,75 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#14111A">
+    android:background="@drawable/screen_background">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Listings"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp" />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="18dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Listings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/ub_surface" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Review your posted items and switch between categories quickly."
+            android:textSize="14sp"
+            android:textColor="@color/ub_soft"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAllListings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="All"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/chip_selected" />
+
+            <Button
+                android:id="@+id/buttonBooksListings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Books"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/ub_deep"
+                android:background="@drawable/chip_unselected"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/buttonElectronicsListings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Electronics"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/ub_deep"
+                android:background="@drawable/chip_unselected"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textViewMyListingsEmptyState"
@@ -21,7 +80,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="You have not posted any listings yet"
-        android:textColor="#CFC7DA"
+        android:textColor="@color/ub_text_secondary"
         android:textSize="16sp"
         android:layout_marginTop="32dp" />
 

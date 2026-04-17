@@ -3,17 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#14111A"
+    android:background="@drawable/screen_background"
     android:padding="12dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chat"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="12dp" />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="18dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Campus Chat"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/ub_surface" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message safely inside UniBazaar and keep every conversation organized."
+            android:textSize="13sp"
+            android:textColor="@color/ub_soft"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMessages"
@@ -26,8 +43,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#201A29"
-        android:padding="8dp">
+        android:background="@drawable/light_card_background"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="8dp">
 
         <EditText
             android:id="@+id/editTextMessage"
@@ -35,9 +54,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Type a message"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#B7AEC7"
-            android:backgroundTint="#C9B3FF" />
+            android:textColor="@color/ub_text_primary"
+            android:textColorHint="@color/ub_text_secondary"
+            android:background="@drawable/input_background"
+            android:padding="14dp" />
 
         <Button
             android:id="@+id/buttonSend"
@@ -45,8 +65,8 @@
             android:layout_height="wrap_content"
             android:text="Send"
             android:textStyle="bold"
-            android:textColor="#1A1422"
-            android:backgroundTint="#C9B3FF"
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary"
             android:layout_marginStart="8dp" />
 
     </LinearLayout>

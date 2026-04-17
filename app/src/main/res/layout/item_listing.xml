@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="300dp"
     android:orientation="vertical"
-    android:layout_marginBottom="12dp"
-    android:padding="16dp"
-    android:background="@drawable/light_card_background">
+    android:layout_margin="6dp"
+    android:padding="12dp"
+    android:background="@drawable/light_card_background"
+    android:elevation="8dp">
 
     <ImageView
         android:id="@+id/imageViewListing"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="132dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_unibazaar_logo"
         android:contentDescription="Listing image"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="10dp" />
 
     <TextView
         android:id="@+id/textViewItemTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"
-        android:textSize="19sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#241B35" />
+        android:textColor="@color/ub_deep"
+        android:maxLines="1" />
 
     <TextView
         android:id="@+id/textViewItemDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description"
-        android:textSize="14sp"
-        android:textColor="#5B506E"
-        android:layout_marginTop="6dp" />
+        android:textSize="13sp"
+        android:textColor="@color/ub_text_secondary"
+        android:maxLines="2"
+        android:layout_marginTop="4dp" />
 
     <TextView
         android:id="@+id/textViewItemPrice"
@@ -41,16 +44,16 @@
         android:text="Rs. 0"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#2E7D32"
-        android:layout_marginTop="10dp" />
+        android:textColor="@color/ub_success"
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:id="@+id/textViewItemCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Category"
-        android:textSize="13sp"
-        android:textColor="#6F6484"
-        android:layout_marginTop="6dp" />
+        android:textSize="12sp"
+        android:textColor="@color/ub_text_primary"
+        android:layout_marginTop="4dp" />
 
 </LinearLayout>

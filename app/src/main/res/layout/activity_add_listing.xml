@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,57 +10,133 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Post New Listing"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp" />
-
-        <EditText
-            android:id="@+id/editTextTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Title"
-            android:layout_marginBottom="12dp" />
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp">
 
-        <EditText
-            android:id="@+id/editTextDescription"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build a Strong Listing"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/ub_surface" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use a sharp title, a direct price, and a clean image link to attract buyers."
+                android:textSize="15sp"
+                android:textColor="@color/ub_soft"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description"
-            android:minLines="3"
-            android:gravity="top"
-            android:layout_marginBottom="12dp" />
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="16dp">
 
-        <EditText
-            android:id="@+id/editTextPrice"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_tile_secondary"
+                android:padding="14dp"
+                android:text="Book"
+                android:textColor="@color/ub_deep"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_tile_secondary"
+                android:padding="14dp"
+                android:text="Tech"
+                android:textColor="@color/ub_deep"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+        </GridLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="12dp" />
+            android:orientation="vertical"
+            android:background="@drawable/light_card_background"
+            android:padding="18dp">
 
-        <EditText
-            android:id="@+id/editTextImageUrl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Image URL"
-            android:inputType="textUri"
-            android:layout_marginBottom="12dp" />
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:textColor="@color/ub_text_primary"
+                android:textColorHint="@color/ub_text_secondary"
+                android:background="@drawable/input_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
 
-        <Spinner
-            android:id="@+id/spinnerCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp" />
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:minLines="3"
+                android:gravity="top"
+                android:textColor="@color/ub_text_primary"
+                android:textColorHint="@color/ub_text_secondary"
+                android:background="@drawable/input_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
 
-        <Button
-            android:id="@+id/buttonPostListing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Post Listing" />
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:textColor="@color/ub_text_primary"
+                android:textColorHint="@color/ub_text_secondary"
+                android:background="@drawable/input_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/editTextImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Image URL"
+                android:inputType="textUri"
+                android:textColor="@color/ub_text_primary"
+                android:textColorHint="@color/ub_text_secondary"
+                android:background="@drawable/input_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/buttonPostListing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Post Listing"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button_primary" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

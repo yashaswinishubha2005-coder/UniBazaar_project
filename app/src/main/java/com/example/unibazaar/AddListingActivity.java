@@ -20,6 +20,9 @@ public class AddListingActivity extends AppCompatActivity {
     private EditText editTextTitle, editTextDescription, editTextPrice, editTextImageUrl;
     private Spinner spinnerCategory;
     private Button buttonPostListing;
+    private String[] categories;
+    private boolean isEditMode;
+    private String listingId;
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -43,7 +46,7 @@ public class AddListingActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
 
-        String[] categories = {"Books", "Electronics", "Furniture", "Clothes", "Others"};
+        categories = new String[]{"Books", "Electronics", "Furniture", "Clothes", "Others"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
@@ -52,7 +55,38 @@ public class AddListingActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCategory.setAdapter(adapter);
 
+        setupEditMode();
+
         buttonPostListing.setOnClickListener(v -> saveListing());
+    }
+
+    private void setupEditMode() {
+        listingId = getIntent().getStringExtra("listingId");
+        String title = getIntent().getStringExtra("title");
+        String description = getIntent().getStringExtra("description");
+        String price = getIntent().getStringExtra("price");
+        String imageUrl = getIntent().getStringExtra("imageUrl");
+        String category = getIntent().getStringExtra("category");
+
+        isEditMode = !TextUtils.isEmpty(listingId);
+        if (!isEditMode) {
+            return;
+        }
+
+        editTextTitle.setText(title);
+        editTextDescription.setText(description);
+        editTextPrice.setText(price);
+        editTextImageUrl.setText(imageUrl);
+        buttonPostListing.setText("Update Listing");
+
+        if (!TextUtils.isEmpty(category)) {
+            for (int i = 0; i < categories.length; i++) {
+                if (category.equals(categories[i])) {
+                    spinnerCategory.setSelection(i);
+                    break;
+                }
+            }
+        }
     }
 
     private void saveListing() {
@@ -90,7 +124,7 @@ public class AddListingActivity extends AppCompatActivity {
         progressDialog.setMessage("Saving listing...");
         progressDialog.show();
 
-        String docId = db.collection("listings").document().getId();
+        String docId = isEditMode ? listingId : db.collection("listings").document().getId();
         String userId = mAuth.getCurrentUser().getUid();
         long timestamp = System.currentTimeMillis();
 
@@ -110,7 +144,8 @@ public class AddListingActivity extends AppCompatActivity {
                 .set(listing)
                 .addOnSuccessListener(unused -> {
                     progressDialog.dismiss();
-                    Toast.makeText(AddListingActivity.this, "Listing posted successfully", Toast.LENGTH_SHORT).show();
+                    String message = isEditMode ? "Listing updated successfully" : "Listing posted successfully";
+                    Toast.makeText(AddListingActivity.this, message, Toast.LENGTH_SHORT).show();
                     finish();
                 })
                 .addOnFailureListener(e -> {
